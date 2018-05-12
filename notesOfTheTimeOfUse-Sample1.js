@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         notesOnTheTimeOfUseSample1
+// @name         notesOfTheTimeOfUse-Sample1
 // @version      0.1
 // @description  *** PROTOTYPE CODE ***
 // @include      *://apps.collabservintegration.com/profiles/*
