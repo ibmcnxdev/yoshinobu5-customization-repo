@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function(){
     var res = document.evaluate('//div[@class="lotusMeta lotusSection"]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
     //console.log("res.snapshotLength=" + res.snapshotLength);
     if (res.snapshotLength==1) {
-		  var node = res.snapshotItem(0);
+      var node = res.snapshotItem(0);
       var pNode = document.createElement("p");
       pNode.setAttribute("style", "color:red; font-weight;bold;");
-		  var newTextNode = document.createTextNode("ここに八千代工業さまのメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。");
+      var newTextNode = document.createTextNode("ここに追加のメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。");
       pNode.appendChild(newTextNode);
       node.appendChild(pNode);    
     }
@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function(){
       //console.log("newCell2=" + newCell2);
       newCell2.colSpan=2;
       newCell2.setAttribute("style", "color:red; font-weight;bold;");
-		  var newText2 = document.createTextNode('ここに八千代工業さまのメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。。');
-	    newCell2.appendChild(newText2);
+      var newText2 = document.createTextNode('ここに追加のメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。。');
+      newCell2.appendChild(newText2);
     }
 
     var res3 = document.evaluate('//table[@id="tableEditProfileAboutMe"]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function(){
       var newCell3  = newTableRow3.insertCell(0);
       //console.log("newCell3=" + newCell3);
       newCell3.setAttribute("style", "color:red; font-weight;bold;");
-	  var newText3 = document.createTextNode('ここに八千代工業さまのメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。。');
-	  newCell3.appendChild(newText3);
+      var newText3 = document.createTextNode('ここに追加のメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。。');
+      newCell3.appendChild(newText3);
     }
   }
   
