@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name     additionalNotesForEditMyProfileView
+// @name     addNotesForEditMyProfileView
 // @version  1
 // @grant    none
 // ==/UserScript==
