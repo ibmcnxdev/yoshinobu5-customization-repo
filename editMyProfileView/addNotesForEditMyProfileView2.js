@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if (divNode1 != null) {
             var pNode = document.createElement("p");
             pNode.setAttribute("style", "color:red; font-weight;bold;");
-  		      var newTextNode = document.createTextNode("ver2:ここにメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。");
+  		      var newTextNode = document.createTextNode('ver2:ここにメッセージを入れる。例えば、クレジットカード情報を含めないで下さい等。');
             pNode.appendChild(newTextNode);
             divNode1.appendChild(pNode);    
         }
