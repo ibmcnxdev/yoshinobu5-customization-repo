@@ -11,11 +11,12 @@ document.addEventListener('DOMContentLoaded', function(){
   var regexp = new RegExp("/profiles/html/editMyProfileView.do");
   if (regexp.test(document.URL)) {
 
-    if (XPathResult != null) {
-    	//console.log("document.URL=" + document.URL);
+    if (typeof XPathResult != "undefined") {
+	    //console.log("document.URL=" + document.URL);
   		var regexp = new RegExp("/profiles/html/editMyProfileView.do");
   		if (regexp.test(document.URL)) {
-    		var res = document.evaluate('//div[@class="lotusMeta lotusSection"]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+		var res = document.evaluate('//div[@class="lotusMeta lotusSection"]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
     		//console.log("res.snapshotLength=" + res.snapshotLength);
     		if (res.snapshotLength==1) {
       		var node = res.snapshotItem(0);

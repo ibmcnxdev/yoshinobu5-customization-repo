@@ -1,0 +1,10 @@
+div.y-InfoMsg-JPN {
+  background-color: green;  /* 背景色の指定 */
+  border-radius: 1em;       /* 角丸の指定 */
+  border: 3px green solid;  /* 枠線を引く */
+}
+div.y-InfoMsg-ENG {
+  background-color: green;  /* 背景色の指定 */
+  border-radius: 1em;       /* 角丸の指定 */
+  border: 3px green solid;  /* 枠線を引く */
+}
