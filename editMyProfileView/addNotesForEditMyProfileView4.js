@@ -18,13 +18,19 @@ document.addEventListener('DOMContentLoaded', function(){
   var noteLi3_ja  = "従業員個人の知識・知見・ノウハウ等を可視化し、共有する。";
   var noteLi4_ja  = "従業員間のコミュニケーションを活性化する。";
 
-	var userLanguage = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
-  var noteMain = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteMain_ja : noteMain_en;
-  var noteLi1  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi1_ja : noteLi1_en;
-  var noteLi2  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi2_ja : noteLi2_en;;
-  var noteLi3  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi3_ja : noteLi3_en;;
-  var noteLi4  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi4_ja : noteLi4_en;;
+//	var userLanguage = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
+//  var noteMain = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteMain_ja : noteMain_en;
+//  var noteLi1  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi1_ja : noteLi1_en;
+//  var noteLi2  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi2_ja : noteLi2_en;;
+//  var noteLi3  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi3_ja : noteLi3_en;;
+//  var noteLi4  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi4_ja : noteLi4_en;;
 
+  var noteMain = (document.documentElement.lang == "ja") ? noteMain_ja : noteMain_en;
+  var noteLi1  = (document.documentElement.lang == "ja") ? noteLi1_ja : noteLi1_en;
+  var noteLi2  = (document.documentElement.lang == "ja") ? noteLi2_ja : noteLi2_en;
+  var noteLi3  = (document.documentElement.lang == "ja") ? noteLi3_ja : noteLi3_en;
+  var noteLi4  = (document.documentElement.lang == "ja") ? noteLi4_ja : noteLi4_en;
+	
   //console.log("document.URL=" + document.URL);
   var regexp = new RegExp("/profiles/html/editMyProfileView.do");
   if (regexp.test(document.URL)) {
