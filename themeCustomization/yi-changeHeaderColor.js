@@ -7,7 +7,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){  
  console.log("yi-changeHeaderColor: Event is fired. document.URL=" + document.URL);
- if (new RegExp("https://apps.ap.collabserv.com").test(document.URL)) {
+ if (new RegExp("https://apps.ap.collabserv.com").test(document.URL) && new RegExp("https://apps.na.collabserv.com").test(document.URL)) {
 
   //var style_text = "background-color: #000;"
   var style_text = "color: #696969 !important; background-color: #d3d3d3;"
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
         elt_children[i].setAttribute("style", style_text);
 
-        if (elt_children[i].tagName == 'A') {
+        if (i==0 && elt_children[i].tagName == 'A') {
              mo.disconnect();
         }
       }
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
             elt_children[i].setAttribute("style", style_text);
             
-            if (elt_children[i].tagName == 'A') {
+            if (i==0 && elt_children[i].tagName == 'A') {
               mo.disconnect();
             }
           }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
             elt_children[i].setAttribute("style", style_text);
             
-            if (elt_children[i].tagName == 'A') {
+            if (i==0 && elt_children[i].tagName == 'A') {
               mo.disconnect();
             }
           }
