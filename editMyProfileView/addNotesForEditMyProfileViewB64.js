@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //  var noteLi3  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi3_ja : noteLi3_en;;
 //  var noteLi4  = (userLanguage == "ja" || userLanguage == "ja-JP") ? noteLi4_ja : noteLi4_en;;
 
-  var noteMain = (document.documentElement.lang == "ja") ? noteMain_ja : noteMain_en;
+  var noteMain = (document.documentElement.lang == "ja") ? decodeURIComponent(escape(window.atob(noteMain_ja))) : noteMain_en;
   var noteLi1  = (document.documentElement.lang == "ja") ? decodeURIComponent(escape(window.atob(noteLi1_ja))) : noteLi1_en;
   var noteLi2  = (document.documentElement.lang == "ja") ? decodeURIComponent(escape(window.atob(noteLi2_ja))) : noteLi2_en;
   var noteLi3  = (document.documentElement.lang == "ja") ? decodeURIComponent(escape(window.atob(noteLi3_ja))) : noteLi3_en;
