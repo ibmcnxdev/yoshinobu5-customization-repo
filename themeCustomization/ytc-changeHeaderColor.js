@@ -7,7 +7,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){  
  console.log("ytc-changeHeaderColor: Event is fired. document.URL=" + document.URL);
- if (new RegExp("https://apps.ap.collabserv.com").test(document.URL) && new RegExp("https://apps.na.collabserv.com").test(document.URL)) {
+ if (new RegExp("https://apps.ap.collabserv.com").test(document.URL) || new RegExp("https://apps.na.collabserv.com").test(document.URL)) {
 
   var style_text = "background-color: #3e8e74;";
 
