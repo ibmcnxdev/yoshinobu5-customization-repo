@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
         elt_children[i].setAttribute("style", style_text);
 
-        if (i==0 && elt_children[i].tagName == 'A') {
+        if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
              mo.disconnect();
         }
       }
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
             elt_children[i].setAttribute("style", style_text);
             
-            if (i==0 && elt_children[i].tagName == 'A') {
+            if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
               mo.disconnect();
             }
           }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log("yi-changeHeaderColor: elt_children[" + i + "]=" + elt_children[i].tagName);
             elt_children[i].setAttribute("style", style_text);
             
-            if (i==0 && elt_children[i].tagName == 'A') {
+            if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
               mo.disconnect();
             }
           }
