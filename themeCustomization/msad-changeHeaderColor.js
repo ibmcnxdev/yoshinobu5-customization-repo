@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
  console.log("msad-changeHeaderColor: Event is fired. document.URL=" + document.URL);
  if (new RegExp("https://apps.ap.collabserv.com").test(document.URL) || new RegExp("https://apps.na.collabserv.com").test(document.URL)) {
 
-  var style_text = "background-color: #2e675a;"
+  var style_text = "background-color: #2e675a;";
 
   var elt_nav_bar_include = document.getElementById('nav_bar_include');
 　console.log("msad-changeHeaderColor: elt_nav_bar_include=" + elt_nav_bar_include);
