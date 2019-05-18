@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function(){
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var res_data = JSON.parse(xhr.responseText);
-            console.log("res_data=" + res_data);
+            console.log("controlCommunityExternalSharing2: res_data=" + res_data);
             var res_data_filtered = res_data.filter(function(item, index){
                 if (item.id == myUserID) return true;
             });
-            console.log("res_data_filtered.length=" + res_data_filtered.length);
+            console.log("controlCommunityExternalSharing2: res_data_filtered.length=" + res_data_filtered.length);
             if (res_data_filtered != null && res_data_filtered.length >= 1) {
                 elt_allowExternal.removeAttribute("disabled");
                 elt_allowExternal.parentElement.setAttribute("style", "");
