@@ -7,7 +7,7 @@
 
 //window.addEventListener('load', function(){
 document.addEventListener('DOMContentLoaded', function(){
-  console.log("tdk-getExternalSharingDisabledByDefault: Event is fired. (document.URL=" + document.URL + ")");
+  console.log("controlCommunityExternalSharing2: Event is fired. (document.URL=" + document.URL + ")");
 
   if (new RegExp("https://apps.ap.collabserv.com/communities/service/html/communitycreate").test(document.URL) ||
       new RegExp("https://apps.ce.collabserv.com/communities/service/html/communitycreate").test(document.URL) ||
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     //console.log("_ids=" + _ids);
     var myUserID = (_ids[0].split('='))[1].split(':')[0];
-    console.log("myUserID=" + myUserID);
+    console.log("controlCommunityExternalSharing2: myUserID=" + myUserID);
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://apps.ap.collabserv.com/files/form/api/library/ad0d984b-3282-4259-a9e8-5b6251d2f96a/document/5d28a198-cd58-43dd-aa66-2c2af25f9f89/media/userslist.txt', true);
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function(){
             if (res_data_filtered != null && res_data_filtered.length >= 1) {
                 elt_allowExternal.removeAttribute("disabled");
                 elt_allowExternal.parentElement.setAttribute("style", "");
-                console.log("##### Display? ######");
+                console.log("controlCommunityExternalSharing2: elt_allowExternal is displaying.");
             }
         }
     };
     xhr.send(null);
-    console.log("##### xhr.send #####");
+    console.log("controlCommunityExternalSharing2: xhr.send was executed.");
   }
 });
