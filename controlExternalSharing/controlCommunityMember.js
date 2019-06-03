@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name tdk-controlCommunityMember
-// @description Turn the checkbox for "Allow External" off by default.
+// @description Hide community member control when a user is not allowed external sharing.
 // @version  1
 // @grant    none
 // ==/UserScript==
