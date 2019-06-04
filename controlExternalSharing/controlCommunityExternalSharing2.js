@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
     elt_advancedLink.setAttribute("style", "display: none;");
     
     var allCookies = document.cookie.split(';');
-    console.log("controlCommunityExternalSharing2: array_cookie=" + array_cookie);
+    console.log("controlCommunityExternalSharing2: allCookies=" + allCookies);
     var _ids = allCookies.filter(function(element, index, allCookies) {
 //        return element.trim().match("^ids");
           return new RegExp(/^ids/i).test(element.trim());
