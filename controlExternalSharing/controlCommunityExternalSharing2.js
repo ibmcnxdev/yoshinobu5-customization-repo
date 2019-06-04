@@ -43,7 +43,12 @@ document.addEventListener('DOMContentLoaded', function(){
             var res_data_filtered = res_data.filter(function(item, index){
                 if (item.id == myUserID) return true;
             });
-            console.log("controlCommunityExternalSharing2: res_data_filtered.length=" + res_data_filtered.length);
+            if (res_data_filtered != null) {
+                console.log("controlCommunityExternalSharing2: res_data_filtered.length=" + res_data_filtered.length);
+            }
+            else {
+                console.log("controlCommunityExternalSharing2: res_data_filtered=null");
+            }
             if (res_data_filtered != null && res_data_filtered.length >= 1) {
                 elt_allowExternal.removeAttribute("disabled");
                 elt_allowExternal.parentElement.setAttribute("style", "");
