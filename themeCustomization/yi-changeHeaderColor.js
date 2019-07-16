@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // New code
       var style_of_elt_nav_bar_include = elt_nav_bar_include.getAttribute("style");
-						console.log("yi-changeHeaderColor: elt_nav_bar_include@style (Before)=" + style_of_elt_nav_bar_include);
+	console.log("yi-changeHeaderColor: elt_nav_bar_include@style (Before)=" + style_of_elt_nav_bar_include);
       if (style_of_elt_nav_bar_include == null) {
          elt_nav_bar_include.setAttribute("style", style_text);
 						}
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //      elt_children[i].setAttribute("style", style_text);
 
 // New code
-						  var style_of_elt_children = elt_children[i].getAttribute("style");
+	  var style_of_elt_children = elt_children[i].getAttribute("style");
         console.log("yi-changeHeaderColor: elt_children[" + i + "]@style (Before)=" + style_of_elt_children);
         if (style_of_elt_children == null) {
            elt_children[i].setAttribute("style", style_text);
@@ -59,6 +59,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
              mo.disconnect();
+             // Added a link to logo image
+	     if (elt_children[i].tagName == 'IMG') {
+		var elt_aTag = document.createElement('A');
+		elt_aTag.setAttribute('href', 'http://www.yachiyo-ind.co.jp');
+		elt_aTag.setAttribute('target', '_blank');
+		elt_aTag.appendChild(elt_children[i]);
+		//console.log("Append Link; elt_aTag=" + elt_aTag);
+		elt_nav_bar_include.replaceChild(elt_aTag, elt_children[i]);								  
+	     }
         }
       }
     });
@@ -113,6 +122,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
             if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
               mo.disconnect();
+	      // Added a link to logo image
+	      if (elt_children[i].tagName == 'IMG') {
+		var elt_aTag = document.createElement('A');
+		elt_aTag.setAttribute('href', 'http://www.yachiyo-ind.co.jp');
+		elt_aTag.setAttribute('target', '_blank');
+		elt_aTag.appendChild(elt_children[i]);
+		//console.log("Append Link; elt_aTag=" + elt_aTag);
+		elt_nav_bar_include.replaceChild(elt_aTag, elt_children[i]);								  
+	      }
             }
           }
         });
@@ -168,6 +186,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
             if (i==0 && (elt_children[i].tagName == 'A' || elt_children[i].tagName == 'IMG')) {
               mo.disconnect();
+	      // Added a link to logo image
+	      if (elt_children[i].tagName == 'IMG') {
+		var elt_aTag = document.createElement('A');
+		elt_aTag.setAttribute('href', 'http://www.yachiyo-ind.co.jp');
+		elt_aTag.setAttribute('target', '_blank');
+		elt_aTag.appendChild(elt_children[i]);
+		//console.log("Append Link; elt_aTag=" + elt_aTag);
+		elt_nav_bar_include.replaceChild(elt_aTag, elt_children[i]);								  
+	      }
             }
           }
         });
